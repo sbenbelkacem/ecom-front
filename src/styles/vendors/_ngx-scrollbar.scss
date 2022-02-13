@@ -1,0 +1,14 @@
+.gantt-container {
+  .ng-scrollbar-visible {
+    background: #fEfefe;
+    border-top: 2px solid $white-qua;
+    border-left: 1px solid $white-qua;
+
+    .ng-scrollbar {
+      position: absolute;
+      top: 5px;
+      cursor: pointer;
+      width: calc(100% - 15px)
+    }
+  }
+}

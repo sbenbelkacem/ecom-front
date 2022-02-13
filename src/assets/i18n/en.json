@@ -1,0 +1,11 @@
+{
+  "SIDEBAR": {
+    "ORDERS": " My Orders ",
+    "PRODUCTS": " Catalog of Products"
+  },
+  "NAVBAR": {
+    "PROFILE": "Profile",
+    "SETTINGS": "Settings",
+    "LOGOUT": "Logout"
+  }
+}

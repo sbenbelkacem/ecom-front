@@ -1,0 +1,11 @@
+{
+  "SIDEBAR": {
+    "ORDERS": " Mes Commandes",
+    "PRODUCTS": " Catalogue des produits"
+  },
+  "NAVBAR": {
+    "PROFILE": "Profile",
+    "SETTINGS": "Paramètres",
+    "LOGOUT": "Deconnexion"
+  }
+}

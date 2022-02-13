@@ -1,0 +1,12 @@
+version: '2'
+services:
+  ecom-front:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: ecom-front
+    image: ecom-front
+    ports:
+      - "8090:80"
+    volumes:
+      - ./conf:/etc/nginx/conf.d/

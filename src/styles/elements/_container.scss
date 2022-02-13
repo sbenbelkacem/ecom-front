@@ -1,0 +1,29 @@
+.container {
+  margin: 0 auto;
+  position: relative;
+  max-width: 100%;
+  width: auto;
+  padding: $container-padding;
+  flex-grow: 1;
+  align-self: flex-start;
+
+  &.is-widescreen {
+    max-width: $fullhd;
+  }
+
+  &.is-desktop {
+    max-width: $widescreen;
+  }
+
+  &.is-tablet {
+    max-width: $desktop;
+  }
+
+  &.is-mobile {
+    max-width: $tablet;
+  }
+
+  &.is-vcentered {
+    align-self: center;
+  }
+}
