@@ -15,11 +15,11 @@ node("slave-ic"){
   }
 
   stage("quality check"){
-    sh "sonar-scanner \\\n" +
-      "  -Dsonar.projectKey=ecom-front \\\n" +
-      "  -Dsonar.sources=. \\\n" +
-      "  -Dsonar.host.url=http://54.234.48.131:11001 \\\n" +
-      "  -Dsonar.login=58fbac0ef213ed20cf54051639f2e7a8d5429073"
+//    sh "sonar-scanner \\\n" +
+//      "  -Dsonar.projectKey=ecom-front \\\n" +
+//      "  -Dsonar.sources=. \\\n" +
+//      "  -Dsonar.host.url=http://54.234.48.131:11001 \\\n" +
+//      "  -Dsonar.login=58fbac0ef213ed20cf54051639f2e7a8d5429073"
   }
 
   node("vm-deploy"){
