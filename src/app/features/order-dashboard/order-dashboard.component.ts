@@ -35,7 +35,6 @@ export class OrderDashboardComponent implements OnInit {
       {prop: 'id', name: 'id'},
       {prop: 'productName', name: 'Nom du produit'},
       {prop: 'status', name: 'Status commande'},
-      {prop: 'customerFirstName', name: 'Prénom'},
       {prop: 'totalPrice', name: 'Prix total'},
       {prop: 'quantity', name: 'Quantité'}
     ]
