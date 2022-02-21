@@ -12,24 +12,18 @@ import {authCodeFlowConfig} from './auth.config';
 export class AppComponent implements OnInit {
 
   constructor(private oauthService: OAuthService) {
-
-    // this.oauthService.events
-    //   .pipe(filter(e => e.type === 'token_received'))
-    //   .subscribe(_ => {
-    //     console.log('token received');
-    //   });
   }
 
   ngOnInit() {
-    // this.oauthService.configure(authCodeFlowConfig);
-    // this.oauthService.setupAutomaticSilentRefresh();
-    // this.oauthService.loadDiscoveryDocumentAndLogin();
+    this.oauthService.configure(authCodeFlowConfig);
+    this.oauthService.setupAutomaticSilentRefresh();
+    this.oauthService.loadDiscoveryDocumentAndLogin();
   }
 
   get userName(): string {
     const claims = this.oauthService.getIdentityClaims();
     if (!claims) return null;
-    return claims['given_name'];
+    return claims['preferred_username'];
   }
 
   get idToken(): string {

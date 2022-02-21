@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {TranslateService} from "@ngx-translate/core";
 import {OAuthService} from 'angular-oauth2-oidc';
+import {filter} from 'rxjs/operators';
 
 
 @Component({
@@ -20,9 +21,15 @@ export class NavBarComponent implements OnInit {
               private translateService: TranslateService,
               private oauthService: OAuthService) {
     this.selectedLanguage = "fr";
+    this.oauthService.events
+      .pipe(filter(e => e.type === 'token_received'))
+      .subscribe(_ => {
+        this.firstName = this.oauthService.getIdentityClaims()['preferred_username'];
+      });
   }
 
   ngOnInit() {
+
 
   }
 

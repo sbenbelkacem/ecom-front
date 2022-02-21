@@ -16,7 +16,7 @@ export class HttpRequestInterceptor implements HttpInterceptor {
 
     if (idToken != null) {
       req = req.clone({
-        headers : req.headers.set('Authorization', 'Bearer' + idToken)
+        headers : req.headers.set('Authorization', 'Bearer ' + idToken)
       })
     }
     return next.handle(req);
